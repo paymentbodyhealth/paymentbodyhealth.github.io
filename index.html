@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Редирект</title>
-    <meta http-equiv="refresh" content="0; URL=https://onelink.to/va4jyb">
+    <script>
+        function openDeepLink() {
+            var userAgent = window.navigator.userAgent;
+            
+            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+                window.location.href = "https://appbodyhealth.github.io";
+            } else {
+                window.location.href = "intent:#Intent;scheme=https://appbodyhealth.github.io;package=com.bodyhealth;end";
+            }
+        }
+        
+        window.onload = function() {
+            openDeepLink();
+        };
+    </script>
 </head>
-<body>
-    <p>Перенаправление на другой сайт...</p>
-</body>
 </html>
